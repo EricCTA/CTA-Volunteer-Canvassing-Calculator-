@@ -17,12 +17,13 @@ body {
 h2 {
     text-align: center;
     margin-bottom: 20px;
-    color: #333;
+    color: #002c71; /* Dark blue */
 }
 
 label {
     display: block;
     margin-bottom: 10px;
+    color: #002c71; /* Dark blue */
 }
 
 input[type="number"] {
@@ -36,15 +37,15 @@ input[type="number"] {
 button {
     width: 100%;
     padding: 10px;
-    background-color: #007bff;
-    color: #fff;
+    background-color: #fecb00; /* Yellow */
+    color: #002c71; /* Dark blue */
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #fcbf00; /* Lighter yellow */
 }
 
 #result {
