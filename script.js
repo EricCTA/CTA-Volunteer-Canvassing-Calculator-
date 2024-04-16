@@ -9,16 +9,11 @@ function calculateVolunteers() {
     var totalDoors2Hour = num2HourShifts * 2 * doorsPerHourPerVolunteer;
     var totalDoors4Hour = num4HourShifts * 4 * doorsPerHourPerVolunteer;
 
-    var expectedContacts2Hour = Math.round(totalDoors2Hour * contactRate);
-    var expectedContacts4Hour = Math.round(totalDoors4Hour * contactRate);
+    var totalDoors = totalDoors2Hour + totalDoors4Hour;
 
-    var volunteersNeeded2Hour = Math.ceil(voterUniverse / totalDoors2Hour);
-    var volunteersNeeded4Hour = Math.ceil(voterUniverse / totalDoors4Hour);
+    var expectedContacts = Math.round(totalDoors * contactRate);
+    var volunteersNeeded = Math.ceil(voterUniverse / totalDoors);
 
-    document.getElementById("result").innerHTML = "After School Canvassing (2-hour shifts):<br>" +
-        "Volunteers Needed: " + volunteersNeeded2Hour + "<br>" +
-        "Expected Contacts: " + expectedContacts2Hour + "<br><br>" +
-        "Weekend Canvassing (4-hour shifts):<br>" +
-        "Volunteers Needed: " + volunteersNeeded4Hour + "<br>" +
-        "Expected Contacts: " + expectedContacts4Hour;
+    document.getElementById("result").innerHTML = "Volunteers Needed: " + volunteersNeeded + "<br>" +
+        "Expected Contacts: " + expectedContacts;
 }
