@@ -15,4 +15,10 @@ function calculateVolunteers() {
     var volunteersNeeded2Hour = Math.ceil(voterUniverse / totalDoors2Hour);
     var volunteersNeeded4Hour = Math.ceil(voterUniverse / totalDoors4Hour);
 
-    document.getElementById("result").innerHTML = "After School Canvassing (2-hour shi
+    document.getElementById("result").innerHTML = "After School Canvassing (2-hour shifts):<br>" +
+        "Volunteers Needed: " + volunteersNeeded2Hour + "<br>" +
+        "Expected Contacts: " + expectedContacts2Hour + "<br><br>" +
+        "Weekend Canvassing (4-hour shifts):<br>" +
+        "Volunteers Needed: " + volunteersNeeded4Hour + "<br>" +
+        "Expected Contacts: " + expectedContacts4Hour;
+}
