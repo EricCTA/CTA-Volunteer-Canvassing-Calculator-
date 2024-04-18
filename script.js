@@ -1,14 +1,10 @@
 function calculateFunding() {
-    // Get input values
-    var pacContribution = parseInt(document.getElementById("pacContribution").value);
-    var abcContribution = parseInt(document.getElementById("abcContribution").value);
+    // Get input value
+    var pacContribution = parseFloat(document.getElementById("pacContribution").value);
 
-    // Calculate total campaign budget (PAC contribution is unrestricted)
-    var totalCampaignBudget = pacContribution + (abcContribution / 0.65);
-
-    // Determine maximum additional funding from SPG
-    var maxAdditionalFunding = totalCampaignBudget - pacContribution - abcContribution;
+    // Calculate maximum additional funds for ABC Committee (65% of PAC contribution)
+    var abcMaxContribution = pacContribution * 0.65;
 
     // Display the result
-    document.getElementById("result").innerHTML = "Maximum Additional Funding from SPG: $" + maxAdditionalFunding.toFixed(2);
+    document.getElementById("result").innerHTML = "Maximum Additional Funds for ABC Committee: $" + abcMaxContribution.toFixed(2);
 }
