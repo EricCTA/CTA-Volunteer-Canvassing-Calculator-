@@ -23,28 +23,4 @@ label {
 input[type="number"] {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #fecb00; /* Yellow */
-    color: #002c71; /* Dark blue */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #fcbf00; /* Lighter yellow */
-}
-
-#result {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #f0f0f0;
-    border-radius: 5px;
-}
+    border: 1
