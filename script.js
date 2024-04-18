@@ -1,24 +1,14 @@
-function calculateVolunteers() {
+function calculateFunding() {
     // Get input values
-    var voterUniverse = parseInt(document.getElementById("voterUniverse").value);
+    var pacContribution = parseInt(document.getElementById("pacContribution").value);
+    var abcContribution = parseInt(document.getElementById("abcContribution").value);
 
-    // Assumptions
-    var contactRate = 0.15;
-    var votersPerHourPerVolunteer = 15;
-    var canvassingHoursPerShift = 3; // Only 3 out of 4 hours are used for canvassing
+    // Calculate total campaign budget (PAC contribution is unrestricted)
+    var totalCampaignBudget = pacContribution + (abcContribution / 0.65);
 
-    // Calculate total door knocks
-    var totalDoorKnocks = voterUniverse / contactRate;
-
-    // Calculate total canvassing hours required
-    var totalCanvassingHours = totalDoorKnocks / votersPerHourPerVolunteer;
-
-    // Calculate number of shifts needed
-    var numShifts = Math.ceil(totalCanvassingHours / canvassingHoursPerShift);
-
-    // Calculate number of volunteers needed
-    var volunteersNeeded = Math.ceil(numShifts);
+    // Determine maximum additional funding from SPG
+    var maxAdditionalFunding = totalCampaignBudget - pacContribution - abcContribution;
 
     // Display the result
-    document.getElementById("result").innerHTML = "Number of Volunteers Needed: " + volunteersNeeded;
+    document.getElementById("result").innerHTML = "Maximum Additional Funding from SPG: $" + maxAdditionalFunding.toFixed(2);
 }
